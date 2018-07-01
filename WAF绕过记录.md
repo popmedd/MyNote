@@ -10,6 +10,12 @@ Web应用层
     %u 特性  asp（x）+ iis   select=s%u006c%u0006ect
     
     apache
+    除了使用以上Web容器的特性绕过还可以手工Fuzz Waf
+    具体Fuazz如下:
+    get请求处 
+    header请求处 
+    post urlencode内容处 
+    post form-data内容处
     
 数据库交互层
         
@@ -38,5 +44,16 @@ Web应用层
         Char(49)
         Hex(‘a’)
         Unhex(61)
-        MSSQL
+   MSSQL
+        
         可以使用内联注释/**/    
+        :号 and:substring()
+        %2b号 and%2b
+        字符串截取函数
+        Substring(@@version,1,1)
+        Left(@@version,1)
+        Right(@@version,1)
+        字符串转换函数
+        Ascii(‘a’) 这里的函数可以在括号之间添加空格的，一些waf过滤不严会导致bypass
+        Char(‘97’)
+        
