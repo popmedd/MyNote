@@ -21,6 +21,10 @@ web容器层
 数据库交互层
         
         \Nunion的形式 userid=\Nunion select 
+         
+        E0的形式 select * from table where id=1E0union selsect 1,2,3
+        
+        count函数的形式 select(count(*))from(users)
         
         浮点数的形式如1.1,8.0  userid=1.1union select
         
