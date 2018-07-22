@@ -33,4 +33,6 @@
     
     cat 1.txt | iconv --to-code UTF-16LE |base64
     
-    powershell -ep bypass -enc  base64encode  in 1.txt
+    `Exec (Must add ==)`
+    
+    powershell -ep bypass -enc  "PaYloAD=="  
