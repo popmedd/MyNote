@@ -15,6 +15,9 @@
 
     2012抓明文需要HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest的"UseLogonCredential"设置为1，类型为DWORD 32才可以
     
+    reg add HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest /v UseLogonCredential /t REG_DWORD /d 1
+
+    
    
     
     
